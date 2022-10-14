@@ -3,6 +3,8 @@ Powerful DDoS Script
 
 # Install
 ```
+git clone https://github.com/MsYor/YOLANDA; cd YOLANDA
+
 pip3 install httpx
 
 unzip YOLANDA.zip
