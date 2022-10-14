@@ -1,5 +1,6 @@
 import httpx
 
+# you can add more list of API proxy :)
 http_proxies = [
 	"https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
 	"https://www.proxy-list.download/api/v1/get?type=http&anon=elite",
