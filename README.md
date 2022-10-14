@@ -15,8 +15,8 @@ chmod +x YOLANDA
 
 ./YOLANDA
 ```
-# usage:
-./YOLANDA [target_url] [time] [thread] [proxyfile]
+# Example:
+./YOLANDA https://tls.mrrage.xyz 60 1 proxy.txt
 
 
 
