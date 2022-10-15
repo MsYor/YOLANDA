@@ -1,5 +1,6 @@
 # YOLANDA
-Powerful DDoS Script
+Powerful http2 DDoS Script, with mix method! great for cloudflare
+
 
 # Install
 ```
