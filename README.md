@@ -11,14 +11,6 @@ pip3 install httpx
 
 unzip YOLANDA.zip
 
-python3 http_proxy.py
-
-chmod +x YOLANDA
-
-./YOLANDA
-```
-# Example:
-./YOLANDA https://tls.mrrage.xyz 60 1 proxy.txt
-
+python3 start.py
 
 
