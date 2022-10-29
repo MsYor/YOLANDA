@@ -1,6 +1,5 @@
 # YOLANDA
-Powerful http/2 DDoS Script, with mix method! great for cloudflare
-
+Powerful http/2 DDoS Script, Private Method
 
 # Install
 - copy & paste
@@ -11,14 +10,6 @@ pip3 install httpx
 
 unzip YOLANDA.zip
 
-python3 http_proxy.py
-
-chmod +x YOLANDA
-
-./YOLANDA
-```
-# Example:
-./YOLANDA https://tls.mrrage.xyz 60 1 proxy.txt
-
+python3 start.py
 
 
