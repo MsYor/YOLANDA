@@ -1,6 +1,5 @@
 # YOLANDA
-Powerful http/2 DDoS Script, with mix method! great for cloudflare
-
+Powerful http/2 DDoS Script, Private Method
 
 # Install
 - copy & paste
