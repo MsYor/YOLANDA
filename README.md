@@ -1,3 +1,6 @@
+# IF YOU HAVE PROXY API, PUT IT ON proxy_providers.txt
+
+
 # YOLANDA
 Powerful http/2 DDoS Script, Private Method
 
